@@ -1,0 +1,276 @@
+body{
+
+    background-size: cover; /* hace que se adapte al tamaño de la pantalla */
+   
+}
+
+nav{
+  display: flex;
+  flex-wrap: wrap;                 /* Permite que los enlaces se acomoden en columnas si no caben */
+  justify-content: center;         /* Centra horizontalmente */
+  align-items: center;             /* Centra verticalmente */
+  padding: 15px;
+  background-color: #ffffff;
+   
+}
+nav a{
+    color:rgb(0, 0, 0);
+    margin: 0 10px;
+    font-weight: bold;
+    text-decoration: none;
+}
+/* Ícono de hamburguesa oculto por defecto */
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  font-weight: bold;
+}
+/* MODO MÓVIL */
+@media (max-width: 768px) {
+  nav {
+    display: none; /* Se oculta el menú normal */
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+  }
+
+  nav.active {
+    display: flex; /* Solo se muestra cuando se activa */
+  }
+
+  .menu-toggle {
+    display: block;
+    text-align: right;
+  }
+
+  nav a {
+    margin: 10px 0;
+    font-size: 18px;
+  }
+}
+
+
+.presentacion{
+  
+    background-image: url('IMG/15185900_5578502.jpg');
+    background-size: cover;  /* Hace que la imagen cubra todo el contenedor */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que se repita */
+    
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+    min-height: 100vh; /* Hace que el contenedor ocupe la altura de la pantalla */
+
+    display: flex; /* Activa Flexbox */
+    align-items: center; /* Centra el contenido verticalmente */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    flex-wrap: wrap; /* Permite que el contenido se acomode en móviles */
+    gap: 30px; /* Espacio entre elementos internos */
+    padding: 1px; /* Espacio interno */
+}
+
+
+
+
+.presentacion img {
+    width: 300px;                 /* Tamaño de imagen */
+    height: auto;
+    border-radius: 60px;
+  }
+  .texto {
+    max-width: 600px;           /* Controla el ancho del texto */
+    text-align: center;
+  }
+  
+  .texto h1 {
+    color: #000000;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    font-family: 'Courier';
+
+  }
+  
+  .texto p {
+    line-height: 1.6;
+    color: #020101;
+    font-size: 1.2rem;
+    font-family: 'Garamond'; 
+  }
+/* Ajuste para móviles */
+@media (max-width: 768px) {
+  .presentacion {
+    flex-direction: column;
+  }
+
+  .presentacion img {
+    width: 70%;
+  }
+
+  .texto h1 {
+    font-size: 1.5rem;
+  }
+
+  .texto p {
+    font-size: 1rem;
+  }
+}
+
+
+  .Informacion{
+    background-color: #000;
+  padding: 40px 20px;
+  color: white;
+  text-align: center;
+
+  }
+  .Informacion h1{
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  .Informacion p{
+    font-family: 'Raleway', sans-serif;
+  color: white;
+  text-align: center;
+  line-height: 1.2; /* 👈🏼 reduce el interlineado */
+  margin: 5px 0;    /* espaciado más limpio */
+  }
+  @media (max-width: 768px) {
+    .Informacion {
+      padding: 30px 15px;
+    }
+  
+    .Informacion h1 {
+      font-size: 1.5rem;
+    }
+  
+    .Informacion p {
+      font-size: 1rem;
+    }
+  }
+
+
+
+
+
+.Proyectos{
+  background-color: rgb(255, 255, 255);
+  padding: 30px 90px  130px;
+  text-align: center;
+ 
+}
+
+.Proyectos h2 {
+  
+    
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  
+  
+  .contenedor-cajas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px; /* espacio entre cajas */
+  }
+  .contenedor1{
+    width: 250px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 15px;
+    border: 1px solid #ddd;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+   
+  }
+  .contenedor1:hover {
+    transform: scale(1.05);
+  }
+
+  .contenedor1 img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  .contenedor1 .descripcion {
+    font-weight: bold;
+    font-size: 1rem;
+  }
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+  .contenedor1 {
+    width: 90%;
+  }
+}
+
+
+
+.seccionFinal{
+  background-color: #000;
+  padding: 40px 20px;
+  text-align: center;
+
+}
+.seccionFinal h1{
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  padding: 0px 0 20px 0;;
+  margin-top: -40px; /* 🔼 Esto lo sube */
+}
+.seccionRojo{
+  background-color: rgb(113, 164, 212);
+   position: relative;
+   width: 80%;
+   height: 60px;
+  top: -90px; /* ← Subimos la mitad de su altura */
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: white;
+  padding: 20px 40px;
+  border-radius: 15px;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  z-index: 10;
+  font-weight: 600;
+
+}
+.seccionRojo h1{
+  color: #ffffff;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 4cqb;
+  padding: 50px  0px 00px 0px;;
+
+}
+.iconos-sociales{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.iconos-sociales img {
+  width: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.iconos-sociales img:hover {
+  transform: scale(1.1);
+}
+@media (max-width: 600px) {
+  .seccionRojo h1,
+  .seccionFinal h1 {
+    font-size: 1.3rem;
+  }
+
+  .iconos-sociales img {
+    width: 40px;
+  }
+}
