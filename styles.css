@@ -242,10 +242,11 @@ img {
 }
 
 .proyecto-img {
-  height: 210px;
-  object-fit: cover;
+    height: auto;        
+    max-height: 250px;   
+    object-fit: contain; 
+    background-color: #000;
 }
-
 .card-title {
   font-size: 1.3rem;
   font-weight: 700;
